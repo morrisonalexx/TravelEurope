@@ -1,0 +1,7 @@
+@import "normalize";
+@include normalize();
+@import "global/fonts.scss";
+@import "normalize.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "global/page.scss";

@@ -1,0 +1,25 @@
+/*sizes and breakpoints*/
+$phone: 320px;
+$phone-max: 767px;
+$tablet: 768px;
+$tablet-max: 1023px;
+$desktop: 1024px;
+$desktop-max: 1920px;
+
+$phone-paddings: 16px;
+$tablet-paddings: 21px;
+$desktop-paddings: 375px;
+
+/*retina*/
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+
+/*project colors*/
+$main-accent: #FE7865;
+$accent-hover: #F17D4B;
+$darkest: #141517;
+$dark: #2C2E3F;
+$grey-background: #FBF8F8;
+$grey-border: #D7D9DF;
+$white: #FFFFFF;
