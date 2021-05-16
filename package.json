@@ -52,6 +52,9 @@
   },
   "dependencies": {
     "del": "^4.1.1",
-    "normalize-scss": "^7.0.1"
+    "imagemin": "^6.1.0",
+    "imagemin-webp": "^5.1.0",
+    "normalize-scss": "^7.0.1",
+    "normalize.css": "^8.0.1"
   }
 }

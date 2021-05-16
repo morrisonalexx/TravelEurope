@@ -1,0 +1,82 @@
+.promo {
+  position: relative;
+  height: 860px;
+  color: $white;
+  background-image: url("../../img/greece-main-picture.jpg");
+  background-repeat: no-repeat;
+  background-color: $background-photo-color;
+  background-size: cover;
+  background-position: 50% 0;
+
+  @media (max-width: $tablet-max) {
+    height: 344px;
+    background-image: url("../../img/greece-main-tablet.jpg");
+
+    @media (min-resolution: $retina-dppx),
+    (min-resolution: $retina-dppx) {
+      background-image: url("../../img/greece-main-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $phone-max) {
+    height: 235px;
+  }
+}
+
+.promo__wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 412px;
+  top: 195px;
+  left: 56%;
+
+  @media (max-width: $tablet-max) {
+    position: relative;
+    align-items: center;
+    width: 398px;
+    margin: 0 auto;
+    left: auto;
+    top: 60px;
+  }
+
+  @media (max-width: $phone-max) {
+    width: 100%;
+    @include mobile-container;
+  }
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 30px;
+  @include promo-title;
+
+  @media (max-width: $tablet-max) {
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: $phone-max) {
+    width: 294px;
+    text-align: center;
+    margin-bottom: 102px;
+  }
+}
+
+.promo__text {
+  margin: 0;
+  margin-bottom: 39px;
+  @include promo-text;
+
+  @media (max-width: $tablet-max) {
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: -1;
+  }
+
+  @media (max-width: $phone-max) {
+    color: $dark;
+  }
+}

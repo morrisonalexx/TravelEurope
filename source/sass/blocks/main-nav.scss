@@ -1,0 +1,145 @@
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: auto;
+
+  &--closed .main-nav__toggle {
+    display: none;
+  
+    @media (max-width: $tablet-max) {
+      display: block;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 17px;
+        left: 25px;
+        width: 22px;
+        height: 2px;
+        z-index: 2;
+        background-color: white;
+        box-shadow: 0 8px 0 0 $white, 0 16px 0 0 $white;
+      }
+    }
+  
+    @media (max-width: $phone-max) {
+      &::before {
+        left: 14px;
+      }
+    }
+  }
+
+  &--opened .main-nav__toggle {
+    @media (max-width: $tablet-max) {
+      background-color: $white;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 22px;
+        height: 2px;
+        background-color: $toggle-opened;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+      &:active::before,
+      &:active::after {
+        background-color: fade($toggle-opened, 30%);
+      }
+    }
+
+    @media (max-width: $phone-max) {
+      &::before,
+      &::after {
+        top: 25px;
+        left: 14px;
+        width: 22px;
+        height: 2px;
+        background-color: $toggle-opened;
+      }
+    }
+  }
+  
+  @media (max-width: $tablet-max) {
+    justify-content: space-between;
+    min-height: 50px;
+  }
+} 
+
+.main-nav__wrapper {
+  display: flex;
+  min-width: 473px;
+  margin: 0 auto;
+  justify-content: space-between;
+
+
+  @media (max-width: $tablet-max) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav__tel {
+  width: 224px;
+  @include links;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+  text-decoration: underline;
+  padding-left: 30px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../img/phone-black.svg");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $phone-max) {
+    display: none;
+  }
+}
+
+.main-nav__toggle {
+  @media (max-width: $tablet-max) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    cursor: pointer;
+    border: none;
+    width: 72px;
+    height: 50px;
+    background-color: $main-accent;
+  }
+
+  @media (max-width: $phone-max) {
+    width: 50px;
+  }
+}
+

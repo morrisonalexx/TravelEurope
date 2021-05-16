@@ -1,0 +1,36 @@
+.button {
+  width:340px;
+  height: 75px;
+  color: $white;
+  text-decoration: none;
+  background-color: $main-accent;
+  @include button-link;
+  padding: 30px 40px 30px 40px;
+  
+  &--promo {
+    width: 340px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      right: 40px;
+      background-image: url("../../img/arrow-right.svg");
+    }
+
+    @media (max-width: $tablet-max) {
+      width:250px;
+      height: 50px;
+      padding: 18px 40px 18px 40px;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    @media (max-width: $phone-max) {
+      width: 288px;
+    }
+  }
+}
